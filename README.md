@@ -9,16 +9,16 @@ USAGE INSTRUCTIONS
 
 First Time Setup
 ----------------
-1- Install NodeJS (http://nodejs.org/)
-2- Ensure the Node binary is added to your environment variables
-3- In terminal, navigate to root of directory
-4- Install NodeJS modules in terminal > npm install
-5- Start server in terminal > node server.js
+- Install NodeJS (http://nodejs.org/)
+- Ensure the Node binary is added to your environment variables
+- In terminal, navigate to root of directory
+- Install NodeJS modules in terminal > npm install
+- Start server in terminal > node server.js
 
 Usage
 -----
-1- Point browser to > http://localhost:3000
-2- Enjoy!
+- Point browser to > http://localhost:3000
+- Enjoy!
 
 Running Tests
 -------------
