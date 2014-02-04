@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title &amp; Meta -->
+    <title>NowTV tests</title>
+    <meta charset="utf-8">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="libs/mocha/mocha.css">
+</head>
+
+<body>
+
+    <div id="mocha"></div>
+
+    <!-- Testing Libraries -->
+    <script src="libs/mocha/mocha.js"></script>
+    <script src="libs/chai/chai.js"></script>
+    <script src="libs/sinon/sinon.js"></script>
+    <script>
+        // Use the expect version of chai assertions - http://chaijs.com/api/bdd
+        var expect = chai.expect;
+
+        // Tell mocha we want TDD syntax
+        mocha.setup('tdd');
+    </script>
+
+    <!-- Libs -->
+    <script src="../www/libs/jquery-1.8.3.min.js"></script>
+    <script src="../www/libs/underscore-min.js"></script>
+    <script src="../www/libs/backbone-min.js"></script>
+    <script src="../www/libs/handlebars-v1.3.0.js"></script>
+
+    <!-- Source files -->
+    <script src="../www/app/params.js"></script>
+    <script src="../www/app/models/moviemodel.js"></script>
+    <script src="../www/app/models/moviecollection.js"></script>
+    <script src="../www/app/views/searchpreviewview.js"></script>
+
+    <!-- Test Data -->
+    <script src="testdata/allmovies.js"></script>
+
+    <!-- Unit Tests -->
+    <script src="models/moviecollection.test.js"></script>
+
+    <!-- UI Tests -->
+    <script src="views/searchpreviewview.test.js"></script>
+
+    <script>
+        if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+        else { mocha.run(); }
+    </script>
+
+
+<script id="searchPreviewTemplate" type="text/x-handlebars-template">
+    <div id="searchResults">
+        <div id="searchTitle">
+        MOVIES<br>
+        <a id="showResultsBtn" href="#/searchresults">VIEW ALL</a>
+        </div>
+      <div id="searchList">
+      </div>
+  </div>
+</script>
+
+<script id="searchItemTemplate" type="text/x-handlebars-template">
+  <div id="{{id}}" class="search-item" style="background-image: url('{{thumbnail}}');">
+    {{title}}
+  </div>
+</script>
+
+</body>
+</html>

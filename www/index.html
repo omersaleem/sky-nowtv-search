@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Now TV</title> 
+
+	<!-- Viewport settings -->
+	<meta name="viewport" content="user-scalable=no,initial-scale=1.0" />
+
+	<!-- Remove auto detection of phone numbers -->
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- build:css js/styles.min.css -->
+	<link rel="stylesheet" href="styles/core.css" />
+	<link rel="stylesheet" href="styles/search.css" />
+	<link rel="stylesheet" href="styles/movie.css" />
+	<!-- endbuild -->
+</head>
+
+<body>
+	
+	<div id="headerArea">
+		<img id="headerLogo" src="gfx/logo.jpg" />
+	</div>
+	<div id="navBar">
+		<a href="" class="nav-button">HOME</a>
+		<a href="" class="nav-button">NEW RELEASES</a>
+		<a href="" class="nav-button">COLLECTIONS</a>
+		<a href="" class="nav-button">GENRES</a>
+		<a href="" class="nav-button">MOVIE CHANNELS</a>
+		<a href="" class="nav-button">NEWS</a>
+		<a href="" class="nav-button">MY MOVIES</a>
+
+		<input id="searchField" class="search-textfield" type="search" name="searchText" placeholder="" />
+
+	</div>
+
+	<div id="contentArea">
+		<div id="viewContainer"></div>
+		<div id="searchResultsContainer"></div>
+	</div>
+
+
+<!-- build:js js/libs.min.js -->
+<script type="text/javascript" src="libs/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="libs/underscore-min.js"></script>
+<script type="text/javascript" src="libs/backbone-min.js"></script>
+<script type="text/javascript" src="libs/handlebars-v1.3.0.js"></script>
+<!-- endbuild -->
+
+<!-- build:js js/main.min.js -->
+<script type="text/javascript" src="app/params.js"></script>
+<script type="text/javascript" src="app/models/moviemodel.js"></script>
+<script type="text/javascript" src="app/models/moviecollection.js"></script>
+<script type="text/javascript" src="app/controllers/searchcontroller.js"></script>
+<script type="text/javascript" src="app/views/searchpreviewview.js"></script>
+<script type="text/javascript" src="app/views/moviedetailview.js"></script>
+<script type="text/javascript" src="app/views/searchresultsview.js"></script>
+<script type="text/javascript" src="app/router.js"></script>
+<script type="text/javascript" src="app/main.js"></script>
+<!-- endbuild -->
+
+<script id="searchPreviewTemplate" type="text/x-handlebars-template">
+	<div id="searchResults">
+		<div id="searchTitle">
+		MOVIES<br>
+		<a id="showResultsBtn" href="#/searchresults">VIEW ALL</a>
+		</div>
+	  <div id="searchList">
+	  </div>
+  </div>
+</script>
+
+<script id="searchItemTemplate" type="text/x-handlebars-template">
+  <div id="{{id}}" class="search-item" style="background-image: url('{{thumbnail}}');">
+  	{{title}}
+  </div>
+</script>
+
+<script id="movieDetailTemplate" type="text/x-handlebars-template">
+  <div class='movie-title'>{{title}}</div>
+  <div class='movie-subtitle'>{{slug}}</div>
+  <br />
+  <img src={{thumbnail}} class="image-poster" />
+</script>
+
+<script id="searchResultsTemplate" type="text/x-handlebars-template">
+  <div>{{resultcount}} SEARCH RESULTS FOR '{{searchterm}}'</div>
+  <br />
+  {{#each results}}
+    <div class="movie-tile">
+      <div class="tile-poster" style="background-image: url('{{thumbnail}}');"></div>
+      <div class="tile-title">{{title}}</div>
+    </div>
+  {{/each}}
+</script>
+
+</body>
+</html>

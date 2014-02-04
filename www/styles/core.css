@@ -1,0 +1,76 @@
+
+body {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	font-family: sans-serif, helvetica, arial;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+
+	background-color: #e9eee8;
+	padding: 0 1rem;
+	min-width: 900px;
+}
+
+#headerArea {
+	height: 5rem;
+	width: 100%;
+}
+
+#headerLogo {
+	height: 100%;
+}
+
+#navBar {
+	display: flex;
+	flex-direction: row;
+	height: 2rem;
+	width: 100%;
+	border-radius: 0.25rem;
+	border: 1px solid #121011;
+
+	background: #69224e; /* Old browsers */
+	background: -moz-linear-gradient(top,  #69224e 0%, #262024 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#69224e), color-stop(100%,#262024)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #69224e 0%,#262024 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #69224e 0%,#262024 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #69224e 0%,#262024 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #69224e 0%,#262024 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69224e', endColorstr='#262024',GradientType=0 ); /* IE6-9 */
+
+}
+
+.nav-button {
+	text-decoration: none;
+	line-height: 2rem;
+	padding: 0 1rem;
+	color: white;
+	font-size: 0.75rem;
+}
+
+#searchField {
+	flex: 1;
+	margin: 0.25rem 1rem;
+	width: 100%;
+
+	padding-left: 1.5rem;
+	border-radius: 0.25rem;
+	border: none;
+	outline: none;
+	background-color: white;
+	background-image: url("../gfx/search.png");
+	background-size: auto 90%;
+	background-position: 0.25rem;
+	background-repeat: no-repeat;
+}
+
+#contentArea {
+	position: relative;
+	padding: 2rem;
+}
+

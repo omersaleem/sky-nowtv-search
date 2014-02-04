@@ -1,0 +1,10 @@
+{
+  "name": "nowtv-server",
+  "description": "Interview Test App for NowTV",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "mocha": "~1.17.1"
+  }
+}
