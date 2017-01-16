@@ -18,7 +18,6 @@ First Time Setup
 Usage
 -----
 - Point browser to > http://localhost:3000
-..* works
 - Enjoy!
 
 Running Tests
